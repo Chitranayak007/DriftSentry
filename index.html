@@ -59,7 +59,7 @@
 </main>
 </div>
 <script>
-const API=localStorage.getItem("DRIFTSENTRY_API")||"http://127.0.0.1:8000", $=x=>document.getElementById(x);
+const API=localStorage.getItem("DRIFTSENTRY_API")||"https://driftsentry-1.onrender.com", $=x=>document.getElementById(x);
 let users=[];let currentAnalysis=null;
 async function api(p){const r=await fetch(API+p);if(!r.ok)throw Error(await r.text());return r.json()}
 function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
